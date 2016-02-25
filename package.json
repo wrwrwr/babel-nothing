@@ -1,0 +1,27 @@
+{
+    "name": "babel-plugin-transform-nothing",
+    "version": "0.0.1",
+    "description": "Babel transform that does nothing.",
+    "author": "Wojtek Ruszczewski <babel-nothing@wr.waw.pl>",
+    "keywords": ["babel", "plugin", "transform", "no-op"],
+    "scripts": {
+        "build": "babel main.jsx -o dist/main.es5.js",
+        "test": "eslint . --ext=js --ext=jsx && mocha --ui tdd tests",
+        "prepublish": "npm run build && npm test"
+    },
+    "main": "dist/main.es5.js",
+    "main:es5": "dist/main.es5.js",
+    "main:es6": "dist/main.es6.js",
+    "main:es7": "main.jsx",
+    "peerDependencies": {
+        "babel-cli": "^6.5.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/wrwrwr/babel-nothing"
+    },
+    "bugs": {
+        "url": "https://github.com/wrwrwr/babel-nothing/issues"
+    },
+    "license": "MIT"
+}
